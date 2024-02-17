@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.body-content {
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%; /* Makes image responsive */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.fine-print {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Landscape */
+@media (orientation: landscape) {
+    .banner, header, .body-content, .fine-print {
+        background-color: #343a40; /* Darker background for contrast */
+    }
+
+    body, button {
+        background-color: #007bff; /* Blue theme for landscape */
+        color: white;
+    }
+}
+
+/* Portrait */
+@media (orientation: portrait) {
+    .banner, header, .body-content, .fine-print {
+        background-color: #ffffff; /* Lighter background for a clean look */
+        color: #343a40; /* Dark text for readability */
+    }
+
+    body, button {
+        background-color: #28a745; /* Green theme for portrait */
+        color: white;
+    }
+}
