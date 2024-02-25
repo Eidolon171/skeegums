@@ -1,75 +1,69 @@
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
-.banner {
-    background-color: #007BFF;
+.navbar {
+    background-color: #000;
+    overflow: hidden;
+    padding: 8px 10px;
+}
+
+.navbar a {
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-header {
-    background-color: #6c757d;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.body-content {
-    padding: 20px;
-    text-align: center;
-}
-
-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%; /* Makes image responsive */
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
     border: none;
-    cursor: pointer;
 }
 
-.fine-print {
+.separator {
+    background-color: white;
+    height: 4px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: #f8f9fa;
+}
+
+.image-container {
     text-align: center;
+    padding: 0 10px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-entry {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: solid 4px black;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-}
-
-/* Landscape */
-@media (orientation: landscape) {
-    .banner, header, .body-content, .fine-print {
-        background-color: #343a40; /* Darker background for contrast */
-    }
-
-    body, button {
-        background-color: #007bff; /* Blue theme for landscape */
-        color: white;
-    }
-}
-
-/* Portrait */
-@media (orientation: portrait) {
-    .banner, header, .body-content, .fine-print {
-        background-color: #ffffff; /* Lighter background for a clean look */
-        color: #343a40; /* Dark text for readability */
-    }
-
-    body, button {
-        background-color: #28a745; /* Green theme for portrait */
-        color: white;
-    }
 }
