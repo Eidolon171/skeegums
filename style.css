@@ -12,6 +12,7 @@ body, html {
     background-color: #000;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap; /* Allow the navbar to wrap on smaller screens */
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
@@ -22,16 +23,30 @@ body, html {
     text-decoration: none;
     margin: 10px;
     padding: 10px 15px;
+    white-space: nowrap; /* Prevents the text in navbar from wrapping */
 }
 
 .navbar input[type=text] {
     background: white;
     color: black;
     border-radius: 5px;
+    flex-grow: 1; /* Allow the search input to grow */
+    margin-left: 10px; /* Add margin to the left of the search bar */
+}
+
+/* Adjusts search input on smaller screens */
+@media (max-width: 768px) {
+    .navbar input[type=text] {
+        flex-grow: 0; /* Prevent the search bar from taking too much space */
+        width: 50%; /* Fixed width for mobile */
+        min-width: 150px; /* Minimum width so it doesn't become too small */
+    }
 }
 
 /* Flexbox for image gallery to keep images docked properly */
 .image-gallery {
+    background-color: #000; /* Set background color to black */
+    color: white; /* Set text color to white */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,6 +68,10 @@ body, html {
 .image-container img {
     width: 100%;
     height: auto;
+}
+
+.image-container p {
+    color: white; /* Set text color to white */
 }
 
 /* Blog entry styling */
@@ -79,9 +98,14 @@ footer {
 
 /* Media query for responsive layout adjustments */
 @media (max-width: 768px) {
-    .navbar input[type=text], .navbar a {
+    .navbar {
+        justify-content: center; /* Center the navbar items on smaller screens */
+    }
+
+    .navbar a, .navbar input[type=text] {
         padding: 10px;
         margin: 5px;
+        font-size: 12px; /* Reduce font size for small screens */
     }
 
     .image-gallery {
